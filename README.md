@@ -7,6 +7,8 @@ Six structured datasets were extracted, cleaned, transformed, and merged into a 
 
 The project highlights hands-on experience in multi-source data integration, data cleaning, feature transformation, and pipeline structuring using Python.
 
+Link to whole project via Google Collab: [https://colab.research.google.com/drive/1T7gahFWhTsPRMcY8n0sP1AI-MDGGuujz?usp=sharing](https://colab.research.google.com/drive/1ciyhHlerKPY3DMGYNVX62pakmfYJ_N_W#scrollTo=uOeTyTRJgOgH)
+
 ### Data sources: 
 
 **1. Enrollies' data:** https://docs.google.com/spreadsheets/d/1VCkHwBjJGRJ21asd9pxW4_0z2PWuKhbLR3gUHm-p4GI/edit?usp=sharing
@@ -21,28 +23,34 @@ After enrollment everyone should fill the form about their education level. This
 
 Another survey that is being collected manually by educational department is about working experience.
 
-**4. Training hours:**
-
-**Database credentials:** 
-* Database type: MySQL
-* Host: 112.213.86.31
-* Port: 3360
-* Login: etl_practice
-* Password: 550814
-* Database name: company_course
-* Table name: training_hours
+**4. Training hours:** Database credentials were provided in a secure local environment.
 
 **5. City development index:** https://sca-programming-school.github.io/city_development_index/index.html
 
 The City Development Index (CDI) is a measure designed to capture the level of development in cities. It may be significant for the resulting prediction of student's employment motivation.
 
-**6. Employment:**
+**6. Employment:** Database credentials were provided in a secure local environment.
 
-**Database credentials:**
-* Database type: MySQL
-* Host: 112.213.86.31
-* Port: 3360
-* Login: etl_practice
-* Password: 550814
-* Database name: company_course
-* Table name: employment
+### Pipeline summary: 
+
+#### ETL Pipeline
+
+### Extract
+- Google Sheets (Enrollies data)
+- Excel file (Education data)
+- CSV file (Work experience)
+- MySQL database (Training hours, Employment)
+- Public CDI dataset
+
+### Transform
+- Standardized column naming
+- Removed duplicates
+- Handled missing values
+- Encoded categorical variables
+- Merged 6 datasets into unified table
+
+### Load
+- Exported clean dataset to CSV
+- Final dataset ready for analytics or modeling
+
+
